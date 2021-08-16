@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/whguddnr9/learngo/banking"
+	accounts "github/whguddnr9/learngo/acoounts"
 )
 
 func main() {
-	account := banking.Account{Owner: "nico", Balance: 1000}
-	fmt.Println(account)
+	account := accounts.NewAccount("nico")
+	account.Deposit(10)
+	fmt.Println(account.Balance())
 }
